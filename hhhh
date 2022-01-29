@@ -1,0 +1,18 @@
+parsers:
+  - reg: https://subcon.dlj.tf/*
+    yaml: 
+      mix-object: # object
+        dns:
+          enable: true
+          enhanced-mode: redir-host
+          nameserver:
+            - 8.8.8.8
+            - 223.5.5.5
+            - 114.114.114.114
+        tun:
+          enable: true
+          stack: gvisor
+          dns-hijack:
+            - 198.18.0.2:53
+          auto-route: true
+          auto-detect-interface: true
